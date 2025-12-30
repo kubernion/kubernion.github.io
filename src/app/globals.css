@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* === Infinite Slider Animation === */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  animation: scroll 40s linear infinite; /* Slower (40s) for premium feel */
+  display: flex;
+  width: max-content; /* Critical for seamless looping */
+}
+
+/* === Rotating Border Animation === */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-spin {
+  animation: spin-slow 4s linear infinite;
+}
